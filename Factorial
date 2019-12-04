@@ -1,0 +1,50 @@
+#include<iostream>
+#include<math.h>
+#include<iomanip>
+using namespace std;
+
+long double m,p,s,e,n;
+int counter3,exponent,counter1,counter2,positiveInteger,desiredAccuary,desiredAccuary2;
+int main()
+{
+	cout.setf(ios::fixed,ios::floatfield);
+	cout<<"Enter a positive integer: ";
+	cin>>positiveInteger;
+	counter1=1;
+	n=1;
+	while(counter1<=positiveInteger)
+	{
+		n=n*counter1;
+		counter1=counter1+1;
+	}
+	cout<<positiveInteger<<"! is"<<n<<"\n";
+
+	cout<<"Enter desired accuracy of e: ";
+	cin>>desiredAccuary;
+	counter2=1;
+	m=1;
+	while(counter2<=desiredAccuary)
+	{
+		m=m*counter2;
+		e=1/m+e;
+		counter2=counter2+1;
+	}
+	e=e+1;
+	cout<<"e is "<<e<<"\n";
+
+	cout<<"Enter exponent: ";
+	cin>>exponent;
+	cout<<"Enter desired accuracy of e: ";
+	cin>>desiredAccuary2;
+	counter3=1;
+	p=1;
+	s=0;
+	while(counter3<=desiredAccuary2)
+	{
+		p=p*counter3;
+		s=pow(double(exponent),double(counter3))/p+s;
+		counter3=counter3+1;
+	}
+	s=s+1;
+	cout<<"e to the "<<exponent<<" is "<<s;
+}

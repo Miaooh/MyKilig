@@ -1,0 +1,14 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+int main()
+{
+	int number,factor;
+	cout<<"Decimal\t\t\tOctal\tHexadecimal\n";
+	for(int loop=1;loop<=256;loop++)
+	{
+		cout<<dec<<loop<<"\t\t";
+		cout<<'\t'<<oct<<loop;
+		cout<<'\t'<<hex<<loop<<endl;
+	}
+}
